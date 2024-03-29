@@ -4,6 +4,8 @@ import Mpesa from './pages/Mpesa';
 import HomePage from './components/HomePage';
 import ProductList from './pages/Products';
 import ProductDetails from './pages/ProductDetails';
+import ProductForm from './pages/ProductInput';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
           <Route path="/payment" element={<Mpesa />} />
           <Route path="/products" element={<ProductList />} />
           <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path='/productForm' element={<ProductForm/>} />
         </Routes>
       </Router>
+      <Toaster/>
     </div>
   );
 }
